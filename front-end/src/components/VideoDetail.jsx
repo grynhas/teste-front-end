@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 
 const VideoDetail = () => {
     const [video, setVideo] = useState([]);
-    const KEY = 'AIzaSyC2uudbtemgCziavUcyARUYPDQdQst_ZjM';
+     const KEY = process.env.REACT_APP_KEY;
     const { params } = useRouteMatch();
     const url = `https://www.youtube.com/embed/${params.id}`;
     const classes = useStyles();

@@ -39,8 +39,9 @@ const useStyles = makeStyles({
 const App = () => {
   const [videos, setVideos] = useState();
   const [more, setMore] = useState(0);
-  const KEY = 'AIzaSyDyRShtY1aPx8Atejb65Ip_IknBZwv1JEY';
+  const KEY = process.env.REACT_APP_KEY ;
   const classes = useStyles();
+  console.log('process.env.REACT_APP_KEY', process.env.REACT_APP_KEY)
   
 
   const fetchApi = useCallback(async (search) => {
